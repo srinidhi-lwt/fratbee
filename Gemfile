@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.6'
 gem 'sqlite3'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'rack-cors'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'

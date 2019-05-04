@@ -10,14 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190503175404) do
+ActiveRecord::Schema.define(version: 20190504103643) do
 
   create_table "colleges", force: :cascade do |t|
     t.string "name"
     t.string "code"
     t.string "address"
     t.string "state"
-    t.string "country"
+    t.string "district"
+    t.integer "country_id"
+    t.integer "university_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

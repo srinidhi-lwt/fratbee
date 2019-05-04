@@ -5,7 +5,9 @@ class CreateColleges < ActiveRecord::Migration[5.1]
       t.string :code
       t.string :address
       t.string :state
-      t.string :country
+      t.string :district
+      t.integer :country_id
+      t.integer :university_id
 
       t.timestamps
     end

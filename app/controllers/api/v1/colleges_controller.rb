@@ -1,6 +1,7 @@
 module Api
 	module V1
     class CollegesController < ApplicationController
+     skip_before_action :verify_authenticity_token, only: [:search]
 
       def index
       	colleges = College.all
